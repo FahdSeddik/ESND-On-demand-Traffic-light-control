@@ -10,7 +10,8 @@
 #define BUTTON_H_
 #include "../../MCAL/DIO Driver/dio.h"
 
-#define BUTTON_1_PORT PORT_D
+//Button port and pin
+#define BUTTON_1_PORT PORT_D 
 #define BUTTON_1_PIN PIN2
 
 

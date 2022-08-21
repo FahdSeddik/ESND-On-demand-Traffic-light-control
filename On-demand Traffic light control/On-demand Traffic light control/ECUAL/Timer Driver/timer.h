@@ -12,8 +12,8 @@
 #include "../../Utilities/registers.h"
 
 
-void TIMER_init();
-void TIMER_delay(uint16_t millisec);
+void TIMER_init();//initialize Timer0
+void TIMER_delay(uint16_t millisec); //delay of specific amount default uses 256 prescalar
 
 
 #endif /* TIMER_H_ */
