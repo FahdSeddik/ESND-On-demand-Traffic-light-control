@@ -43,7 +43,7 @@ void APP_start(void){
 		//Configuring Pedestrian LEDs 
 		LED_off(LED_PED_PORT,LED_PED_G_PIN);
 		LED_off(LED_PED_PORT,LED_PED_Y_PIN);
-		LED_on(LED_PED_PORT,LED_PED_R_PIN);
+		//LED_off(LED_PED_PORT,LED_PED_R_PIN);
 		
 		switch(carLED){
 			//Case GREEN LED
@@ -51,6 +51,7 @@ void APP_start(void){
 				LED_on(LED_CAR_PORT,LED_CAR_G_PIN);
 				LED_off(LED_CAR_PORT,LED_CAR_Y_PIN);
 				LED_off(LED_CAR_PORT,LED_CAR_R_PIN);
+				
 				for(i=0;i<50;i++){
 					TIMER_delay(68);
 					if(!normalmode)break;//check if ISR was called
@@ -61,8 +62,10 @@ void APP_start(void){
 			//Case YELLOW LED 
 			case 1:
 				//if not normalmode then we need to blink both
+				
 				if(!normalmode){
 					if(prevcarLED!=2){
+						LED_on(LED_PED_PORT,LED_PED_R_PIN);
 						//blink both yellow leds
 						for(i=0;i<5;i++){
 							LED_on(LED_CAR_PORT,LED_CAR_Y_PIN);
