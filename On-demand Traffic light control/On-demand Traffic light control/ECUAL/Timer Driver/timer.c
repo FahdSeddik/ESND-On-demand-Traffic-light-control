@@ -5,6 +5,9 @@
  *  Author: fahds
  */ 
 #include "timer.h"
+#include <math.h>
+#include "../../Utilities/bit_manipulation.h"
+
 void TIMER_init(){
 	TCCR0 = 0x00; //normal mode
 }
@@ -14,9 +17,9 @@ void TIMER_delay(uint16_t millisec){
 	uint32_t overFlowcnt=0;
 	//max delay 256 micro second
 	//at 1MHz no prescalar
-	// 1024 prescalar 
-	Ttick = 1024.0/1000.0; //ms
-	Tmaxdelay= 262.144; //ms
+	// 256 prescalar 
+	Ttick = 256.0/1000.0; //ms
+	Tmaxdelay= 65.536; //ms
 	if(millisec<Tmaxdelay){
 		TimerInitial = (Tmaxdelay-millisec)/Ttick;
 		Noverflows = 1;
@@ -30,7 +33,7 @@ void TIMER_delay(uint16_t millisec){
 		
 	}
 	TCNT0 = TimerInitial;
-	TCCR0 |= (1<<0) | (1<<2); //1024 prescalar
+	TCCR0 |= (1<<2); //256 prescalar
 	while(overFlowcnt<Noverflows){
 		//busy wait
 		while(READ_BIT(TIFR,0)==0);

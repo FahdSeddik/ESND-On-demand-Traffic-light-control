@@ -13,7 +13,7 @@
 
 
 void TIMER_init();
-void TIMER_delay(uint32_t millisec);
+void TIMER_delay(uint16_t millisec);
 
 
 #endif /* TIMER_H_ */

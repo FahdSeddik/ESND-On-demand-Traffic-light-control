@@ -53,4 +53,12 @@
 #define TIFR (*(volatile uint8_t*)(0x58))
 #define TIMSK (*(volatile uint8_t*)(0x59))
 
+
+//****************************
+//* Interrupt REGISTERS
+//****************************
+#define SREG (*(volatile uint8_t*)(0x5F))
+#define GICR (*(volatile uint8_t*)(0x5B))
+#define MCUCR (*(volatile uint8_t*)(0x55))
+
 #endif /* REGISTERS_H_ */

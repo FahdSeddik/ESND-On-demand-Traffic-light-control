@@ -17,4 +17,3 @@ int main(void)
 	}
 }
 
-TIMER2_COMP_vect
