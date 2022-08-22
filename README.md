@@ -6,7 +6,7 @@ This is an On-demand Traffic light control system for the EgFWD Embedded Systems
 Here, I used Proteus 8 Professional in order to simulate AVR Atmega32. I have the wiring labeled below. <br></br>
 ![image](https://user-images.githubusercontent.com/62207434/185999906-98b91a0e-28eb-4b4b-9db9-d5c393d37160.png)
 
-This is a video for the system running on the simulator. More details about behaviour [here](https://github.com/FahdSeddik/ESND-On-demand-Traffic-light-control#System-Functionality).
+This is a video for the system running on the simulator. More details about behaviour  in the [system-functionality](https://github.com/FahdSeddik/ESND-On-demand-Traffic-light-control#system-functionality) section.
 
 
 
