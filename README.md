@@ -19,4 +19,4 @@ https://user-images.githubusercontent.com/62207434/186000173-a4a9c387-57c7-41ba-
   * The system will stop cars if not already on red light as per request
 
 ## Details & Program Flow Chart
-You can find system details and program flow chart in project documentation here.
+You can find system details and program flow chart in project documentation [here](https://github.com/FahdSeddik/ESND-On-demand-Traffic-light-control/blob/main/Project%20Documentation.pdf).
